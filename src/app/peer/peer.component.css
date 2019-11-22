@@ -1,0 +1,37 @@
+nav {
+    margin-top: 20px;
+}
+
+.navbar {
+    background-color: #4862e4;
+    border-radius: 5px;
+}
+
+table {
+    margin: 10px;
+}
+
+
+table.table-activity thead {
+    background-color: rgba(68, 105, 176, 1);
+    color: white;
+}
+
+table.table-activity td, th {
+    text-align: center;
+    padding: 4px;
+}
+
+table.table-status td, th {
+    text-align: center;
+    padding: 3px;
+}
+
+span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+span.callsign {
+    color: blue;
+}

@@ -1,0 +1,34 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <h4>Master {{ peer.masterid }}</h4>
+</nav>
+<table class="table-status table-bordered">
+    <tr>
+        <th>Address:</th><td>{{ peer.masterAddress }}: {{ peer.masterPort }}</td>
+        <th>Status:</th><td>{{ getStatus(peer.status) }}</td>
+    </tr>
+</table>
+
+<h6>Activity</h6>
+<table class="table-activity table-bordered table-striped col-12">
+    <thead>
+        <tr>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Repeater</th>
+            <th>Slot</th>
+            <th>Start</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stream of peer.streams">
+        <td>{{ stream.source }} <span class='callsign'> {{ getCallsign(stream.source) }}</span> <span class='name'> {{ getName(stream.source) }}</span> <span class='country'> {{ getCountry(stream.source) }}</span></td>
+        <td>{{ stream.destination }}</td>
+        <td>{{ stream.repeater }}</td>
+        <td>{{ stream.slot }}</td>
+        <td>{{ stream.start | date : 'yyyy-MM-dd HH:mm:ss' }}</td>
+        <td>{{ getDuration(stream.start, stream.stop)}}</td>
+    </tr>
+</tbody>
+</table>
