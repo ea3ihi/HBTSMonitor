@@ -1,0 +1,30 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <h4>Master</h4>
+</nav>
+<table class="table-status table-bordered">
+<tr>
+    <th>Address:</th><td>{{ master.address }}: {{ master.port }}</td>
+    <th>Status:</th><td>{{ getStatus(master.status) }}</td>
+</tr>
+</table>
+
+<h6>Connected peers</h6>
+<table class="table-activity table-bordered table-striped col-12">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>CallSign</th>
+        <th>Address</th>
+        <th>Status</th>
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor="let peer of master.peers">
+    <td>{{ peer.id }}</td>
+    <td>{{ peer.callSign }}</td>
+    <td>{{ peer.address.address }}: {{ peer.address.port }}</td>
+    <td>{{ getStatus(peer.status) }}</td>
+</tr>
+</tbody>
+</table>

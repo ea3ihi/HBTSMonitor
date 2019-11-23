@@ -28,6 +28,10 @@ export class HbtsService {
     return this.http.get('/peers');
   }
 
+  public getMasters() {
+    return this.http.get('/masters');
+  }
+
   public getDMRUser(id: number): DMRUser | undefined {
 
     if (this.DMRUsers.has(id)) {

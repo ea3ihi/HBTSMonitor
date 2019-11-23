@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { BridgeComponent } from './bridge/bridge.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PeerComponent } from './peer/peer.component';
+import { MasterComponent } from './master/master.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BridgeComponent,
-    PeerComponent
+    PeerComponent,
+    MasterComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

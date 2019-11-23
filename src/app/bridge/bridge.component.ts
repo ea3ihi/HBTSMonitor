@@ -9,6 +9,7 @@ import { HbtsService, DMRUser } from '../hbts.service';
 export class BridgeComponent implements OnInit {
 
   peers: {};
+  masters: {};
 
   constructor(private hbtsService: HbtsService) { }
 
@@ -23,8 +24,10 @@ export class BridgeComponent implements OnInit {
 
     this.hbtsService.getPeers().subscribe( (data: any) => {
       this.peers = data;
+
+      this.hbtsService.getMasters().subscribe( (dataMaster: any) => {
+        this.masters = dataMaster;
+      });
     });
-
   }
-
 }

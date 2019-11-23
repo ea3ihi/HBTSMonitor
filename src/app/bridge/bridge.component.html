@@ -1,3 +1,8 @@
+
+<div class="master-item" *ngFor="let master of masters">
+    <app-master [master]="master"></app-master>
+</div>
+
 <div class="peer-item" *ngFor="let peer of peers">
     <app-peer [peer]="peer"></app-peer>
 </div>
