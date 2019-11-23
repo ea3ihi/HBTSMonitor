@@ -1,6 +1,6 @@
-# TgmonitorApp
+# HBTS Monitor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+A monitoring app for HomebreTS
 
 ## Development server
 
