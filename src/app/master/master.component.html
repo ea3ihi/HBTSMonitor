@@ -17,6 +17,7 @@
         <th>CallSign</th>
         <th>Address</th>
         <th>Status</th>
+        <th>TGs</th>
     </tr>
 </thead>
 <tbody>
@@ -25,6 +26,9 @@
     <td>{{ peer.callSign }}</td>
     <td>{{ peer.address.address }}: {{ peer.address.port }}</td>
     <td>{{ getStatus(peer.status) }}</td>
+    <td>
+        <span class="badge badge-info" *ngFor="let tg of peer.tgsArray">{{ tg }}</span>
+    </td>
 </tr>
 </tbody>
 </table>

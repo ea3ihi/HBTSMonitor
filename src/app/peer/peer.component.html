@@ -26,7 +26,7 @@
         <td>{{ stream.source }} <span class='callsign'> {{ getCallsign(stream.source) }}</span> <span class='name'> {{ getName(stream.source) }}</span> <span class='country'> {{ getCountry(stream.source) }}</span></td>
         <td>{{ stream.destination }}</td>
         <td>{{ stream.repeater }}</td>
-        <td>{{ stream.slot }}</td>
+        <td>{{ stream.slot==0 ? 1 : 2 }}</td>
         <td>{{ stream.start | date : 'yyyy-MM-dd HH:mm:ss' }}</td>
         <td>{{ getDuration(stream.start, stream.stop)}}</td>
     </tr>
