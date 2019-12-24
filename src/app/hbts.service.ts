@@ -46,6 +46,14 @@ export class HbtsService {
     return undefined;
   }
 
+  public closeTg(peer: number, tg: number): undefined {
+
+    this.http.get('/closetg/' + peer + '/' + tg).subscribe( (data: DMRUserResult) => {
+      console.log(data);
+    });
+
+    return undefined;
+  }
 
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HbtsService } from '../hbts.service';
 
 @Component({
   selector: 'app-master',
@@ -12,7 +13,7 @@ export class MasterComponent implements OnInit {
   // tslint:disable-next-line: no-input-rename
   @Input('master') master;
 
-  constructor() { }
+  constructor(private hbtsService: HbtsService) { }
 
   ngOnInit() {
   }
@@ -24,4 +25,7 @@ export class MasterComponent implements OnInit {
     return 'Unknown';
   }
 
+  closeTg(peer: number, tg: number) {
+    this.hbtsService.closeTg(peer, tg);
+  }
 }

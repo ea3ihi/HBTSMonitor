@@ -27,7 +27,9 @@
     <td>{{ peer.address.address }}: {{ peer.address.port }}</td>
     <td>{{ getStatus(peer.status) }}</td>
     <td>
-        <span class="badge badge-info" *ngFor="let tg of peer.tgsArray">{{ tg }}</span>
+        <span class="badge badge-info" *ngFor="let tg of peer.tgsArray"
+            (click)="closeTg(peer.id, tg)"
+        >{{ tg }}</span>
     </td>
 </tr>
 </tbody>
